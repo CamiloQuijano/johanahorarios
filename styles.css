@@ -1,0 +1,340 @@
+/* ==========================================================
+   RESET
+========================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#f4f6f9;
+    font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
+    color:#444;
+
+}
+
+
+/* ==========================================================
+   TITULOS
+========================================================== */
+
+.titulo{
+
+    font-size:34px;
+    font-weight:700;
+    color:#34495e;
+
+}
+
+.subtitulo{
+
+    font-size:18px;
+    color:#7f8c8d;
+
+}
+
+
+/* ==========================================================
+   LEYENDA
+========================================================== */
+
+.legend{
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:30px;
+
+}
+
+.legend-item{
+
+    display:flex;
+    align-items:center;
+    font-size:14px;
+
+}
+
+.color{
+
+    width:18px;
+    height:18px;
+    border-radius:4px;
+    margin-right:8px;
+    display:inline-block;
+
+}
+
+.apertura{
+
+    background:#2ecc71;
+
+}
+
+.cierre{
+
+    background:#e74c3c;
+
+}
+
+.normal{
+
+    background:#3498db;
+
+}
+
+
+/* ==========================================================
+   CALENDARIO
+========================================================== */
+
+.calendar{
+
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+
+}
+
+
+/* ==========================================================
+   CABECERA
+========================================================== */
+
+.calendar-header{
+
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+
+    background:#34495e;
+    color:white;
+
+}
+
+.calendar-header div{
+
+    padding:15px;
+    text-align:center;
+    font-weight:bold;
+    border-right:1px solid rgba(255,255,255,.15);
+
+}
+
+.calendar-header div:last-child{
+
+    border-right:none;
+
+}
+
+
+/* ==========================================================
+   CUERPO
+========================================================== */
+
+.calendar-body{
+
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+
+}
+
+
+/* ==========================================================
+   DIA
+========================================================== */
+
+.day{
+
+    min-height:170px;
+
+    border:1px solid #ecf0f1;
+
+    padding:10px;
+
+    background:white;
+
+    transition:.25s;
+
+}
+
+.day:hover{
+
+    background:#fafafa;
+
+}
+
+.day.empty{
+
+    background:#f9f9f9;
+
+}
+
+
+/* ==========================================================
+   NUMERO
+========================================================== */
+
+.day-number{
+
+    font-size:18px;
+    font-weight:bold;
+    color:#34495e;
+    margin-bottom:10px;
+
+}
+
+
+/* ==========================================================
+   TURNOS
+========================================================== */
+
+.employee{
+
+    border-radius:6px;
+
+    color:white;
+
+    margin-bottom:8px;
+
+    padding:6px 8px;
+
+    font-size:13px;
+
+    line-height:18px;
+
+}
+
+.employee strong{
+
+    display:block;
+    margin-bottom:3px;
+
+}
+
+.employee.apertura{
+
+    background:#2ecc71;
+
+}
+
+.employee.cierre{
+
+    background:#e74c3c;
+
+}
+
+.employee.normal{
+
+    background:#3498db;
+
+}
+
+
+/* ==========================================================
+   FIN DE SEMANA
+========================================================== */
+
+.weekend{
+
+    background:#f2f2f2;
+
+}
+
+
+/* ==========================================================
+   SELECT
+========================================================== */
+
+.form-select{
+
+    height:46px;
+
+    border-radius:8px;
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:1200px){
+
+.calendar-body{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.calendar-header{
+
+    display:none;
+
+}
+
+.day{
+
+    min-height:200px;
+
+}
+
+}
+
+
+@media(max-width:768px){
+
+.calendar-body{
+
+    grid-template-columns:1fr;
+
+}
+
+.day{
+
+    min-height:auto;
+
+}
+
+.titulo{
+
+    font-size:28px;
+
+}
+
+}
+
+
+/* ==========================================================
+   IMPRESION
+========================================================== */
+
+@media print{
+
+body{
+
+    background:white;
+
+}
+
+.form-select{
+
+    display:none;
+
+}
+
+.calendar{
+
+    box-shadow:none;
+
+}
+
+.day{
+
+    min-height:150px;
+
+}
+
+}
