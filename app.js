@@ -8,25 +8,29 @@ const MES = 6;              // Julio (0 = Enero)
 const ANIO = 2026;
 
 const empleados = [
-
     {
-        nombre: "Camilo",
+        nombre: "Jessica",
         grupo: "A"
     },
-
     {
-        nombre: "Johana",
+        nombre: "Isa",
         grupo: "A"
     },
-
     {
-        nombre: "Carlos",
+        nombre: "Nata",
         grupo: "B"
     },
-
     {
-        nombre: "Andrea",
+        nombre: "Lore",
         grupo: "B"
+    },
+    {
+        nombre: "Lei",
+        grupo: "C"
+    },
+    {
+        nombre: "Jefer",
+        grupo: "C"
     }
 
 ];
